@@ -34,12 +34,15 @@ const Features: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {features.map((feature) => (
-            <div key={feature.id} className="flex flex-col items-center text-center">
-              <div className="mb-6 text-white p-4 border-2 border-white/20 rounded-full bg-white/5">
+            <div 
+              key={feature.id} 
+              className="flex flex-col items-center text-center group hover:bg-white/5 p-6 rounded-xl transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className="mb-6 text-white p-4 border-2 border-white/20 rounded-full bg-white/5 group-hover:bg-white group-hover:text-[#5b6c7c] transition-colors duration-300 shadow-lg">
                 <feature.icon size={48} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-200 leading-relaxed max-w-sm">
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-100 transition-colors">{feature.title}</h3>
+              <p className="text-gray-200 leading-relaxed max-w-sm group-hover:text-white transition-colors">
                 {feature.description}
               </p>
             </div>

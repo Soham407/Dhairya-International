@@ -1,5 +1,5 @@
 import React from 'react';
-import { Factory, FlaskRound, Fuel, Pipette, ArrowRight } from 'lucide-react';
+import { Factory, FlaskRound, Fuel, Pipette } from 'lucide-react';
 import { Product } from '../types';
 
 const Products: React.FC = () => {
@@ -42,17 +42,20 @@ const Products: React.FC = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-white border border-gray-200 rounded-lg p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 group cursor-pointer"
+              className="bg-white border border-gray-200 rounded-lg p-8 flex flex-col items-center text-center shadow-sm hover:shadow-2xl hover:border-blue-400 hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
             >
               <div className="text-gray-600 mb-6 group-hover:text-[#1a4b7c] transition-all duration-300 transform group-hover:scale-110">
                 <product.icon size={64} strokeWidth={1} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 h-14 flex items-center justify-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 h-14 flex items-center justify-center group-hover:text-[#1a4b7c] transition-colors">
                 {product.title}
               </h3>
+              <p className="text-gray-500 text-sm mb-6 leading-relaxed">
+                {product.description}
+              </p>
               
               <div className="mt-auto">
-                <button className="inline-flex items-center text-[#1f5f9a] font-semibold border-b-2 border-transparent hover:border-[#1f5f9a] transition-all pb-0.5 text-sm uppercase tracking-wide">
+                <button className="inline-flex items-center text-[#1f5f9a] font-semibold border-b-2 border-transparent group-hover:border-[#1f5f9a] transition-all pb-0.5 text-sm uppercase tracking-wide">
                   View Specs
                 </button>
               </div>

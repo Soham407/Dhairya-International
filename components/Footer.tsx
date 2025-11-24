@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Registered Office */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Registered Office</h3>
+            <h3 className="text-lg font-bold mb-6 border-b-2 border-blue-500 inline-block pb-1">Registered Office</h3>
             <p className="text-gray-300 leading-relaxed mb-4 text-sm">
               Dhairya International is a<br />
               Registered Office 434 Road,<br />
@@ -19,30 +19,30 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 border-b-2 border-blue-500 inline-block pb-1">Quick Links</h3>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#products" className="hover:text-white transition-colors">Products</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-white hover:pl-2 transition-all duration-300 flex items-center">Home</a></li>
+              <li><a href="#about" className="hover:text-white hover:pl-2 transition-all duration-300 flex items-center">About</a></li>
+              <li><a href="#products" className="hover:text-white hover:pl-2 transition-all duration-300 flex items-center">Products</a></li>
+              <li><a href="#" className="hover:text-white hover:pl-2 transition-all duration-300 flex items-center">Privacy Policy</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Contact</h3>
+            <h3 className="text-lg font-bold mb-6 border-b-2 border-blue-500 inline-block pb-1">Contact</h3>
             <div className="space-y-4">
-              <div className="flex items-center gap-3 group cursor-pointer">
-                <div className="bg-green-500 p-1.5 rounded-full text-white">
+              <div className="flex items-center gap-3 group cursor-pointer transition-transform hover:translate-x-1 duration-300">
+                <div className="bg-green-500 p-2 rounded-full text-white shadow-md group-hover:scale-110 transition-transform">
                     <Phone size={16} fill="white" className="text-white" />
                 </div>
-                <span className="text-gray-300 group-hover:text-white text-sm">+91 9847333852</span>
+                <span className="text-gray-300 group-hover:text-white text-sm transition-colors">+91 9847333852</span>
               </div>
-              <div className="flex items-center gap-3 group cursor-pointer">
-                <div className="bg-white/10 p-1.5 rounded-full">
+              <div className="flex items-center gap-3 group cursor-pointer transition-transform hover:translate-x-1 duration-300">
+                <div className="bg-white/10 p-2 rounded-full shadow-md group-hover:bg-white/20 group-hover:scale-110 transition-all">
                     <Mail size={16} />
                 </div>
-                <span className="text-gray-300 group-hover:text-white text-sm">dhairya.international.com</span>
+                <span className="text-gray-300 group-hover:text-white text-sm transition-colors">dhairya.international.com</span>
               </div>
             </div>
           </div>
